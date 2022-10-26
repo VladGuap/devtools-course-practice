@@ -26,7 +26,7 @@ std::string CLPApplication::operator()(int argc, const char** argv) {
 
   if (std::string(argv[i]) == "--test1" || std::string(argv[i]) == "-t1") {
     std::string test_string = argv[2];
-    std::string exp_result = "UVdFUlRZ";
+    // std::string exp_result = "UVdFUlRZ";
 
     std::string encoded_string = encode(&test_string[0], test_string.size());
 
@@ -37,7 +37,7 @@ std::string CLPApplication::operator()(int argc, const char** argv) {
   }
   if (std::string(argv[i]) == "--test2" || std::string(argv[i]) == "-t2") {
     std::string test_string = argv[2];
-    std::string exp_result = "UVdFUlRZ";
+    // std::string exp_result = "UVdFUlRZ";
 
     std::string encoded_string = encode(&test_string[0], test_string.size());
 
@@ -48,7 +48,7 @@ std::string CLPApplication::operator()(int argc, const char** argv) {
   }
   if (std::string(argv[i]) == "--test3" || std::string(argv[i]) == "-t3") {
     std::string test_string = argv[2];
-    std::string exp_result = "UVdFUlRZ";
+    // std::string exp_result = "UVdFUlRZ";
 
     std::string encoded_string = encode(&test_string[0], test_string.size());
 
