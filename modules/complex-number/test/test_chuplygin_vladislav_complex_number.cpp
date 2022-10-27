@@ -4,7 +4,7 @@
 
 #include "include/complex_number.h"
 
-const double ERROR = 0.001;
+const double ERROR = 1e-6;
 
 TEST(COMPLEX_NUMBER_TEST, can_create_complex_number_with_default_constructor) {
   ASSERT_NO_THROW(ComplexNumber());
@@ -15,13 +15,15 @@ TEST(COMPLEX_NUMBER_TEST, can_create_complex_number_with_parameters) {
 }
 
 TEST(COMPLEX_NUMBER_TEST, can_get_realPart_complex_number) {
-  ComplexNumber obj;
+  ComplexNumber obj(1.5, 2.4);
   ASSERT_NO_THROW(obj.getRe());
+  EXPECT_EQ(1.5, obj.getRe());
 }
 
 TEST(COMPLEX_NUMBER_TEST, can_get_imaginaryPart_complex_number) {
-  ComplexNumber obj;
+  ComplexNumber obj(1.5, 2.4);
   ASSERT_NO_THROW(obj.getIm());
+  EXPECT_EQ(2.4, obj.getIm());
 }
 
 TEST(COMPLEX_NUMBER_TEST, get_realPart_is_correct) {
