@@ -2,8 +2,6 @@
 
 #include "include/shape_volume.h"
 
-#include <math.h>
-
 #include <cmath>
 #include <iostream>
 
@@ -17,7 +15,7 @@ ShapeVolume::ShapeVolume(double _a, double _b) {
   this->b = _b;
 }
 
-double ShapeVolume::BallArea(double x) { return (PI * x * x); }
+double ShapeVolume::BallArea(double x) { return (M_PI * x * x); }
 
 double ShapeVolume::BallVolume(double a, double b, int n) {
   double h;
@@ -30,6 +28,4 @@ double ShapeVolume::BallVolume(double a, double b, int n) {
   return (sum * h);
 }
 
-double ShapeVolume::CubeVolume(double a, double b) {
-  return pow((b - a), 3);
-}
+double ShapeVolume::CubeVolume(double a, double b) { return pow((b - a), 3); }

@@ -1,9 +1,9 @@
 // Copyright 2022 Chuplygin Vladislav
 #ifndef MODULES_CHUPLYGIN_V_SHAPE_VOLUME_INCLUDE_SHAPE_VOLUME_H_
 #define MODULES_CHUPLYGIN_V_SHAPE_VOLUME_INCLUDE_SHAPE_VOLUME_H_
+#define _USE_MATH_DEFINES  // for C
 #include <math.h>
 #include <stdlib.h>
-const double PI = 3.14;
 
 class ShapeVolume {
  private:
