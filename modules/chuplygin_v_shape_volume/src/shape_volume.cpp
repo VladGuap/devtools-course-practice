@@ -6,9 +6,8 @@
 #include <iostream>
 
 ShapeVolume::ShapeVolume() {
-  this->a = {5};
-  this->b = {10};
-  if (b < a) throw "cannot";
+  this->a = {1.0};
+  this->b = {1.0};
 }
 ShapeVolume::ShapeVolume(double _a, double _b) {
   this->a = _a;
@@ -20,7 +19,7 @@ double ShapeVolume::BallArea(double x) { return (M_PI * x * x); }
 double ShapeVolume::BallVolume(double a, double b, int n) {
   double h;
   double sum = 0.0;
-  h = (b - a) / n;
+  h = abs(b - a) / n;
 
   for (int i = 0; i < n; i++) {
     sum += BallArea(a + i * h);
@@ -28,4 +27,6 @@ double ShapeVolume::BallVolume(double a, double b, int n) {
   return (sum * h);
 }
 
-double ShapeVolume::CubeVolume(double a, double b) { return pow((b - a), 3); }
+double ShapeVolume::CubeVolume(double a, double b) {
+  return pow(abs(b - a), 3);
+}
