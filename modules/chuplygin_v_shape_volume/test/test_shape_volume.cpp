@@ -19,37 +19,27 @@ TEST(ShapeVolumeTest, SectionBall2) {
   ASSERT_EQ(S, M_PI * x * x);
 }
 TEST(ShapeVolumeTest, VolumeBall1) {
-  ShapeVolume v;
-  double a = 0;
-  double b = 0;
-  double V = v.BallVolume(a, b, 1000);
+  ShapeVolume v(0, 0);
+  double V = v.BallVolume(1000);
   ASSERT_EQ(V, 0);
 }
 TEST(ShapeVolumeTest, VolumeBall2) {
-  ShapeVolume v;
-  double a = 0;
-  double b = 1;
-  double V = v.BallVolume(a, b, 1000);
+  ShapeVolume v(0, 1);
+  double V = v.BallVolume(1000);
   ASSERT_NEAR(V, 1.045, 0.005);
 }
 TEST(ShapeVolumeTest, VolumeBall3) {
-  ShapeVolume v;
-  double a = -1;
-  double b = 5;
-  double V = v.BallVolume(a, b, 1000);
+  ShapeVolume v(-1, 5);
+  double V = v.BallVolume(1000);
   ASSERT_NEAR(V, 131.72, 0.005);
 }
 TEST(ShapeVolumeTest, VolumeCube1) {
-  ShapeVolume v;
-  double a = 0;
-  double b = 1;
-  double V = v.CubeVolume(a, b);
+  ShapeVolume v(0, 1);
+  double V = v.CubeVolume();
   ASSERT_NEAR(V, 1, 0.00005);
 }
 TEST(ShapeVolumeTest, VolumeCube2) {
-  ShapeVolume v;
-  double a = -5;
-  double b = 10;
-  double V = v.CubeVolume(a, b);
+  ShapeVolume v(-5, 10);
+  double V = v.CubeVolume();
   ASSERT_NEAR(V, 3375, 0.00005);
 }

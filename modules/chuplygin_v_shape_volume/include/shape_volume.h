@@ -15,7 +15,7 @@ class ShapeVolume {
   ShapeVolume();
   ShapeVolume(double _a, double _b);
   double BallArea(double x);
-  double BallVolume(double a, double b, int n);
-  double CubeVolume(double a, double b);
+  double BallVolume(int n);
+  double CubeVolume();
 };
 #endif  // MODULES_CHUPLYGIN_V_SHAPE_VOLUME_INCLUDE_SHAPE_VOLUME_H_

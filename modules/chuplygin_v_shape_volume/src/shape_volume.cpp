@@ -16,7 +16,7 @@ ShapeVolume::ShapeVolume(double _a, double _b) {
 
 double ShapeVolume::BallArea(double x) { return (M_PI * x * x); }
 
-double ShapeVolume::BallVolume(double a, double b, int n) {
+double ShapeVolume::BallVolume(int n) {
   double h;
   double sum = 0.0;
   h = abs(b - a) / n;
@@ -27,6 +27,4 @@ double ShapeVolume::BallVolume(double a, double b, int n) {
   return (sum * h);
 }
 
-double ShapeVolume::CubeVolume(double a, double b) {
-  return pow(abs(b - a), 3);
-}
+double ShapeVolume::CubeVolume() { return pow(abs(this->b - this->a), 3); }
